@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
+import Header from './components/Header';
+import MainContent from './components/MainContent'
 
 function App() {
+const [search, setSearch] = useState("");
+const [characterList, setCharacterList] = useState([]);
+
+const handleSearch = (e) => {
+  e.preventDefault();
+  fetchCharacter(search)
+}
+
+const fetchCharacter = async (query) => {
+  const res = await fetch(`
+  https://api.jikan.moe/v3/search/character?q=${query}&limit=15
+  `);
+  const json = await res.json();
+ 
+  console.log(json.results)
+  setCharacterList(json.results);
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Biscuits</h1>
+      <Header 
+        handleSearch={handleSearch}
+        search={search}
+        setSearch={setSearch}
+      />
+      <MainContent 
+        characterList={characterList}
+      />
     </div>
   );
 }
