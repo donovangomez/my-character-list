@@ -1,9 +1,16 @@
+import CharacterCard from './CharacterCard'
+
 const MainContent = ({ characterList }) => {
     return(
         <div>
             <h2>This is the main content</h2>
             {characterList.map((character) => (
-                <h2>{character.name}</h2>
+                <CharacterCard 
+                  name={character.name}
+                  image={character.image_url}
+                  link={character.link}
+                  id={character.mal_id}
+                />
             ))}
         </div>
     )
