@@ -27,7 +27,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Biscuits</h1>
       <Header
         handleSearch={handleSearch}
         search={search}
