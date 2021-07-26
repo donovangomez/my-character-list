@@ -4,6 +4,11 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   border: 2px solid blue;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  max-width: 1400px;
+  margin: 0 auto;
 `;
 
 const MainContent = ({ characterList }) => {
@@ -16,7 +21,7 @@ const MainContent = ({ characterList }) => {
             name={character.name}
             image={character.image_url}
             link={character.link}
-            id={character.mal_id}
+            key={character.mal_id}
           />
         ))}
       </Wrapper>
