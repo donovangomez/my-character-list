@@ -36,7 +36,7 @@ const MainContent = ({ characterList }) => {
               <CharacterCard
                 name={character.name}
                 image={character.image_url}
-                link={character.link}
+                link={character.url}
                 key={character.mal_id}
               />
             ))}
