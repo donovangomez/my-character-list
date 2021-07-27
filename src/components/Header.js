@@ -2,33 +2,56 @@ import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
 const Hero = styled.section`
-  border: 2px solid red;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3494e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ec6ead,
+    #3494e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ec6ead,
+    #3494e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #fff;
 `;
 
 const HeroWrapper = styled.div`
-  border: 2px solid blue;
-  max-width: 650px;
+  max-width: 50rem;
   margin: 0 auto;
+  text-align: left;
 `;
 
 const Header2 = styled.h2`
   font-size: 3rem;
+  margin: 1rem;
 `;
 
 const Paragraph = styled.p`
   font-size: 2rem;
+  margin: 1rem;
 `;
 
 const SearchWrapper = styled.div`
-  border: 2px solid green;
-  width: 35%;
-  margin: 0 auto;
+  width: 50%;
   position: relative;
+  margin: 1rem;
 `;
 
 const Input = styled.input`
   padding: 0.25rem;
   width: 100%;
+  transition: outline 0.2s ease-in;
+  border: none;
+
+  &:focus {
+    outline: 2px solid #ec6ead;
+  }
 `;
 
 const Button = styled.button`
@@ -37,6 +60,14 @@ const Button = styled.button`
   border: none;
   right: 0;
   height: 100%;
+  font-size: 1.15rem;
+  padding: 0.35rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: #ec6ead;
+  }
 `;
 
 const Header = ({ handleSearch, search, setSearch }) => {
