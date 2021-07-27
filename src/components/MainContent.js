@@ -2,14 +2,12 @@ import CharacterCard from "./CharacterCard";
 import styled from "styled-components";
 
 const CharacterResults = styled.section`
-  border: 2px solid green;
   padding: 3rem 0;
   min-height: 60vh;
   background-color: #eff4f7;
 `;
 
 const Wrapper = styled.div`
-  border: 2px solid blue;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

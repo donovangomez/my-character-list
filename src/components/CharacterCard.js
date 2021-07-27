@@ -6,6 +6,8 @@ const Card = styled.div`
   display: flex;
   background-color: #fff;
   padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 `;
 
 const CharaImg = styled.img`
@@ -13,6 +15,7 @@ const CharaImg = styled.img`
   height: 150px;
   object-fit: cover;
   border-radius: 100%;
+  border: 2px solid #ec6ead;
 `;
 
 const CharaName = styled.h3`
@@ -30,7 +33,7 @@ const CharaInfoWrapper = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 35%;
+  width: 40%;
   font-size: 1.15rem;
 `;
 
