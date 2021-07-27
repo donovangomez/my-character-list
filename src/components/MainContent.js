@@ -4,6 +4,8 @@ import styled from "styled-components";
 const CharacterResults = styled.section`
   border: 2px solid green;
   padding: 3rem 0;
+  min-height: 60vh;
+  background-color: #eff4f7;
 `;
 
 const Wrapper = styled.div`
@@ -24,20 +26,22 @@ const SearchHeader = styled.h2`
 const MainContent = ({ characterList }) => {
   return (
     <CharacterResults>
-      <SearchHeader>Search Results</SearchHeader>
       {!characterList ? (
-        <p>Nothing found</p>
+        <SearchHeader>Nothing Found :(</SearchHeader>
       ) : (
-        <Wrapper>
-          {characterList.map((character) => (
-            <CharacterCard
-              name={character.name}
-              image={character.image_url}
-              link={character.link}
-              key={character.mal_id}
-            />
-          ))}
-        </Wrapper>
+        <div>
+          <SearchHeader>Results</SearchHeader>
+          <Wrapper>
+            {characterList.map((character) => (
+              <CharacterCard
+                name={character.name}
+                image={character.image_url}
+                link={character.link}
+                key={character.mal_id}
+              />
+            ))}
+          </Wrapper>
+        </div>
       )}
     </CharacterResults>
   );

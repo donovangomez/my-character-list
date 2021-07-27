@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 const Card = styled.div`
   width: 24rem;
-  border: 2px solid blue;
   display: flex;
+  background-color: #fff;
+  padding: 1rem;
 `;
 
 const CharaImg = styled.img`
