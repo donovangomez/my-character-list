@@ -44,7 +44,7 @@ const SearchWrapper = styled.div`
 `;
 
 const Input = styled.input`
-  padding: 0.25rem;
+  padding: 0.45rem;
   width: 100%;
   transition: outline 0.2s ease-in;
   border: none;
@@ -83,6 +83,7 @@ const Header = ({ handleSearch, search, setSearch }) => {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                placeholder="Try Riko Sakurauchi"
                 required
               />
               <Button>
