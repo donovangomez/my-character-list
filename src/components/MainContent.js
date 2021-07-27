@@ -25,16 +25,20 @@ const MainContent = ({ characterList }) => {
   return (
     <CharacterResults>
       <SearchHeader>Search Results</SearchHeader>
-      <Wrapper>
-        {characterList.map((character) => (
-          <CharacterCard
-            name={character.name}
-            image={character.image_url}
-            link={character.link}
-            key={character.mal_id}
-          />
-        ))}
-      </Wrapper>
+      {!characterList ? (
+        <p>Nothing found</p>
+      ) : (
+        <Wrapper>
+          {characterList.map((character) => (
+            <CharacterCard
+              name={character.name}
+              image={character.image_url}
+              link={character.link}
+              key={character.mal_id}
+            />
+          ))}
+        </Wrapper>
+      )}
     </CharacterResults>
   );
 };
