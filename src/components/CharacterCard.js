@@ -15,7 +15,7 @@ const CharaImg = styled.img`
   height: 150px;
   object-fit: cover;
   border-radius: 100%;
-  border: 2px solid #ec6ead;
+  border: 3px solid #3494e6;
 `;
 
 const CharaName = styled.h3`
@@ -37,10 +37,26 @@ const ButtonContainer = styled.div`
   font-size: 1.15rem;
 `;
 
+const Anchor = styled.a`
+  color: #3494e6;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: #ec6ead;
+  }
+`;
+
 const Button = styled.button`
   background-color: transparent;
   border: none;
+  color: #3494e6;
+  cursor: pointer;
   font-size: 1.15rem;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: red;
+  }
 `;
 
 const CharacterCard = ({ name, image, link, key }) => {
@@ -50,9 +66,9 @@ const CharacterCard = ({ name, image, link, key }) => {
       <CharaInfoWrapper>
         <CharaName>{name}</CharaName>
         <ButtonContainer>
-          <a href={link} target="_blank" rel="noreferrer">
+          <Anchor href={link} target="_blank" rel="noreferrer">
             <FaExternalLinkAlt />
-          </a>
+          </Anchor>
           <Button>
             <FaHeart />
           </Button>

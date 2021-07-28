@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
 const Hero = styled.section`
-  height: 40vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +76,11 @@ const Header = ({ handleSearch, search, setSearch }) => {
       <header>
         <HeroWrapper>
           <Header2>AnimeCharacterDB</Header2>
-          <Paragraph>Biscuits</Paragraph>
+          <Paragraph>
+            Search for your favorite
+            <br />
+            anime characters
+          </Paragraph>
           <form onSubmit={handleSearch}>
             <SearchWrapper>
               <Input
