@@ -15,7 +15,7 @@ const CharaImg = styled.img`
   height: 150px;
   object-fit: cover;
   border-radius: 100%;
-  border: 3px solid #3494e6;
+  border: 3px solid #667db6;
 `;
 
 const CharaName = styled.h3`
@@ -38,7 +38,7 @@ const ButtonContainer = styled.div`
 `;
 
 const Anchor = styled.a`
-  color: #3494e6;
+  color: #667db6;
   transition: color 0.2s ease-in;
 
   &:hover {
@@ -49,7 +49,7 @@ const Anchor = styled.a`
 const Button = styled.button`
   background-color: transparent;
   border: none;
-  color: #3494e6;
+  color: #667db6;
   cursor: pointer;
   font-size: 1.15rem;
   transition: color 0.2s ease-in;
